@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Encabezado con ícono y título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/darker_gray"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/logo_uns"
+            android:contentDescription="Logotipo de la institución" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gestión de Solicitudes"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Contenedor con marco para solicitud -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tvNombreDocente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del docente"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvLaboratorio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laboratorio: "
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESPERA"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvFechaSolicitud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha de Solicitud: "
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvSolicitante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solicitante: "
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@android:color/black" />
+
+            <!-- Botones de acción -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnAceptar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aceptar"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnRechazar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rechazar"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".DocenteFragment">
+
+    <!-- Barra superior con título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/darker_gray"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/imageViewIcon"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="Logotipo"
+            app:srcCompat="@drawable/logo_uns" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Docente: Gestión de Aulas"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Contenedor para los botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnIngresarAula"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Ingresar al Aula"
+            android:textSize="18sp"
+            android:backgroundTint="@color/md_theme_primary"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp" />
+    </LinearLayout>
+
+    <!-- RecyclerView con marco -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/md_theme_inverseOnSurface">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDocentes"
+            android:layout_width="match_parent"
+            android:layout_height="349dp"
+            android:clipToPadding="false"
+            android:padding="16dp"
+            android:scrollbars="vertical" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
